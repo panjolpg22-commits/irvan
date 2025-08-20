@@ -96,78 +96,62 @@
       </div>
     </section>
 
-    <!-- =================== PERPUSTAKAAN DIGITAL =================== -->
-<section id="perpustakaan" class="py-24 bg-[#0f0f12]">
-  <div class="mx-auto max-w-6xl px-4 text-center">
-    <h2 class="text-3xl font-bold text-[var(--gold)] mb-10">📚 Perpustakaan Digital</h2>
+    <!-- Tombol E-Book SKI di halaman utama -->
+<div class="text-center my-8">
+  <button onclick="document.getElementById('ebook-ski').classList.remove('hidden')" 
+          class="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg hover:bg-blue-700 transition font-semibold">
+    📖 Buka E-Book SKI
+  </button>
+</div>
 
-    <!-- Tabs -->
-    <div class="flex justify-center space-x-4 mb-8">
-      <button onclick="showTab('artikel')" class="tab-btn active-tab">Artikel</button>
-      <button onclick="showTab('kisah')" class="tab-btn">Kisah</button>
-      <button onclick="showTab('refleksi')" class="tab-btn">Refleksi</button>
-    </div>
+<!-- Modal E-Book SKI -->
+<div id="ebook-ski" class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+  <div class="bg-white max-w-4xl w-full rounded-2xl shadow-2xl p-6 relative overflow-y-auto max-h-[90vh]">
+    <!-- Tombol Close -->
+    <button onclick="document.getElementById('ebook-ski').classList.add('hidden')" 
+            class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl font-bold">&times;</button>
+    
+    <!-- Header -->
+    <h2 class="text-3xl font-bold text-center mb-2">📖 E-Book SKI</h2>
+    <p class="text-center text-gray-600 mb-6">Kumpulan <span class="font-semibold">artikel</span>, 
+      <span class="font-semibold">kisah</span>, dan <span class="font-semibold">refleksi</span> 
+      tentang Sejarah Kebudayaan Islam.</p>
 
-    <!-- Artikel -->
-    <div id="tab-artikel" class="tab-content">
-      <div class="glass p-6 rounded-2xl text-left">
-        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Artikel</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="pdf/artikel/ArtikelSki.pdf" target="_blank" class="hover:underline">Pentingnya Sejarah Islam</a></li>
-          <li><a href="pdf/artikel/ArtikelUmar.pdf" target="_blank" class="hover:underline">Umar bin Khattab</a></li>
+    <!-- Isi: Grid 3 Kategori -->
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Artikel -->
+      <div class="bg-gray-50 rounded-xl shadow p-5">
+        <h3 class="text-xl font-semibold mb-4 text-center">📝 Artikel</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="pdf/ArtikelSki.pdf" target="_blank" class="text-blue-600 hover:underline">Artikel SKI Utama</a></li>
+          <!-- Tambah artikel lain di sini -->
         </ul>
       </div>
-    </div>
-
-    <!-- Kisah -->
-    <div id="tab-kisah" class="tab-content hidden">
-      <div class="glass p-6 rounded-2xl text-left">
-        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Kisah</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="pdf/kisah/KisahYamamah.pdf" target="_blank" class="hover:underline">Perang Yamamah</a></li>
-          <li><a href="pdf/kisah/KisahBadar.pdf" target="_blank" class="hover:underline">Perang Badar</a></li>
+      
+      <!-- Kisah -->
+      <div class="bg-gray-50 rounded-xl shadow p-5">
+        <h3 class="text-xl font-semibold mb-4 text-center">📜 Kisah</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="pdf/KisahYamamah.pdf" target="_blank" class="text-blue-600 hover:underline">Perang Yamamah</a></li>
+          <li><a href="pdf/KisahBadar.pdf" target="_blank" class="text-blue-600 hover:underline">Perang Badar</a></li>
+          <!-- Tambah kisah lain di sini -->
         </ul>
       </div>
-    </div>
-
-    <!-- Refleksi -->
-    <div id="tab-refleksi" class="tab-content hidden">
-      <div class="glass p-6 rounded-2xl text-left">
-        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Refleksi</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="pdf/refleksi/RefleksiPondok.pdf" target="_blank" class="hover:underline">Refleksi Pondok</a></li>
-          <li><a href="pdf/refleksi/RefleksiSantri.pdf" target="_blank" class="hover:underline">Refleksi Santri</a></li>
+      
+      <!-- Refleksi -->
+      <div class="bg-gray-50 rounded-xl shadow p-5">
+        <h3 class="text-xl font-semibold mb-4 text-center">💭 Refleksi</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="pdf/RefleksiPondok.pdf" target="_blank" class="text-blue-600 hover:underline">Refleksi Pondok</a></li>
+          <li><a href="pdf/RefleksiSantri.pdf" target="_blank" class="text-blue-600 hover:underline">Refleksi Santri</a></li>
+          <!-- Tambah refleksi lain di sini -->
         </ul>
       </div>
+
     </div>
   </div>
-</section>
-
-<!-- ========== STYLE UNTUK TAB ========== -->
-<style>
-  .tab-btn {
-    @apply px-4 py-2 rounded-xl border border-[var(--gold)] text-[var(--gold)] transition;
-  }
-  .tab-btn:hover {
-    @apply bg-[var(--gold)] text-black;
-  }
-  .active-tab {
-    @apply bg-[var(--gold)] text-black;
-  }
-</style>
-
-<!-- ========== SCRIPT TAB ========== -->
-<script>
-  function showTab(tab) {
-    // sembunyikan semua tab
-    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active-tab'));
-
-    // tampilkan tab terpilih
-    document.getElementById(`tab-${tab}`).classList.remove('hidden');
-    event.target.classList.add('active-tab');
-  }
-</script>
+</div>
 
 <style>
   /* Animasi fade-in tab */
