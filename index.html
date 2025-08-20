@@ -122,80 +122,189 @@
   <div class="max-w-5xl mx-auto px-5">
     <h2 class="text-3xl font-bold text-center mb-10">⚔️ Projek</h2>
 
-    <!-- E-Book SKI -->
-    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
-      <h3 class="text-xl font-bold mb-3">📖 E-Book SKI</h3>
-      <p class="text-gray-600 mb-3">Kumpulan artikel, kisah tokoh, dan refleksi sejarah Islam.</p>
-      
-      <!-- Tab Menu -->
-      <div class="flex gap-3 border-b mb-4">
-        <button class="tab-btn text-blue-600 font-semibold" data-tab="artikel">Artikel</button>
-        <button class="tab-btn text-gray-500" data-tab="kisah">Kisah</button>
-        <button class="tab-btn text-gray-500" data-tab="refleksi">Refleksi</button>
+  <!-- ========== PROJEK (CARD + MODAL) ========== -->
+<section id="projek" class="relative py-24">
+  <div class="overlay">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] tracking-wide">Project — Panglima Islam</h2>
+        <p class="mt-3 text-zinc-200 max-w-2xl mx-auto">Menghidupkan semangat para panglima: keberanian, ilmu, dan iman. Konten sejarah dikemas modern untuk generasi hari ini.</p>
       </div>
 
-      <!-- Tab Content -->
-      <div class="tab-content" id="artikel">
-        <p class="text-gray-700">📑 Artikel SKI (PDF): <a href="assets/ArtikelSKI.pdf" class="text-blue-600 underline">Baca di sini</a></p>
-      </div>
-      <div class="tab-content hidden" id="kisah">
-        <p class="text-gray-700">📜 Kisah Khalid bin Walid dalam Perang Yamamah</p>
-      </div>
-      <div class="tab-content hidden" id="refleksi">
-        <p class="text-gray-700">🌿 Refleksi: Ceritaku Berjuang di NJ Bali</p>
-      </div>
-    </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- E-Book SKI -->
+        <article class="glass rounded-2xl p-6 border border-white/10 card-hover cursor-pointer" onclick="openModal('modal-ebook')">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
+          <p class="mt-2 text-sm text-zinc-300">Wadah Artikel, Kisah, & Refleksi — semua rapi di satu tempat.</p>
+          <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Proses</span>
+          <div class="mt-4 text-[var(--gold)] text-sm inline-flex items-center gap-1">Buka <i class="ph ph-arrow-right"></i></div>
+        </article>
 
-    <!-- Mini Drama -->
-    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
-      <h3 class="text-xl font-bold mb-3">🎭 Mini Drama Sejarah</h3>
-      <p class="text-gray-600 mb-3">Drama pendek tentang peristiwa besar sejarah Islam.</p>
-      <video controls class="rounded-xl w-full">
-        <source src="assets/perang_yamamah.mp4" type="video/mp4">
-        Browser tidak mendukung video.
-      </video>
-    </div>
+        <!-- Mini Drama -->
+        <article class="glass rounded-2xl p-6 border border-white/10 card-hover cursor-pointer" onclick="openModal('modal-drama')" style="animation-delay:.08s">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
+          <p class="mt-2 text-sm text-zinc-300">Drama pendek yang menghidupkan kisah para panglima.</p>
+          <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Ada</span>
+          <div class="mt-4 text-[var(--gold)] text-sm inline-flex items-center gap-1">Lihat <i class="ph ph-arrow-right"></i></div>
+        </article>
 
-    <!-- Karya Santri -->
-    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
-      <h3 class="text-xl font-bold mb-3">✍️ Karya Santri</h3>
-      <p class="text-gray-600 mb-3">Puisi karya santri NJ Bali yang penuh semangat menuntut ilmu.</p>
-      <blockquote class="italic text-gray-700 border-l-4 border-blue-500 pl-4">
-        "Santri berjalan dengan kitab di tangan,  
-        Ilmu jadi cahaya di gelap malam.  
-        Meski jauh dari rumah dan keluarga,  
-        Ridha Allah tujuan utama."
-      </blockquote>
-    </div>
+        <!-- Karya Santri -->
+        <article class="glass rounded-2xl p-6 border border-white/10 card-hover cursor-pointer" onclick="openModal('modal-karya')" style="animation-delay:.16s">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
+          <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, atau gambar kolaborasi adik-adik santri.</p>
+          <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Rencana</span>
+          <div class="mt-4 text-[var(--gold)] text-sm inline-flex items-center gap-1">Buka <i class="ph ph-arrow-right"></i></div>
+        </article>
 
-    <!-- Publikasi -->
-    <div class="bg-white shadow-md rounded-2xl p-5">
-      <h3 class="text-xl font-bold mb-3">📢 Publikasi</h3>
-      <p class="text-gray-600 mb-3">Temukan konten sejarah & karya santri di media sosial:</p>
-      <div class="flex gap-5">
-        <a href="https://www.instagram.com/username" target="_blank" class="text-pink-600 font-semibold hover:underline">Instagram</a>
-        <a href="https://www.tiktok.com/@username" target="_blank" class="text-black font-semibold hover:underline">TikTok</a>
+        <!-- Publikasi -->
+        <article class="glass rounded-2xl p-6 border border-white/10 card-hover cursor-pointer" onclick="openModal('modal-publikasi')" style="animation-delay:.24s">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
+          <p class="mt-2 text-sm text-zinc-300">Sebaran karya di IG, TikTok, YouTube, & forum santri.</p>
+          <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Coming Soon</span>
+          <div class="mt-4 text-[var(--gold)] text-sm inline-flex items-center gap-1">Lihat <i class="ph ph-arrow-right"></i></div>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ========== MODALS ========== -->
+
+<!-- 📖 MODAL E-BOOK SKI -->
+<div id="modal-ebook" class="modal">
+  <div class="modal-content max-w-2xl w-[92vw] max-h-[85vh] overflow-y-auto">
+    <button class="modal-close" onclick="closeModal('modal-ebook')">&times;</button>
+    <h2 class="text-2xl font-bold mb-2 text-[var(--gold)]">📖 E-Book SKI</h2>
+    <p class="text-zinc-300 mb-4">Semua konten masuk ke wadah E-Book: Artikel, Kisah, & Refleksi.</p>
+
+    <!-- Tabs -->
+    <div class="flex flex-wrap gap-2 border-b border-white/10 pb-3 mb-4">
+      <button id="tabbtn-artikel" class="px-3 py-1 rounded-lg bg-[var(--gold)] text-black font-semibold" onclick="switchTab('artikel')">Artikel</button>
+      <button id="tabbtn-kisah"   class="px-3 py-1 rounded-lg bg-white/10 text-zinc-100" onclick="switchTab('kisah')">Kisah</button>
+      <button id="tabbtn-refleksi" class="px-3 py-1 rounded-lg bg-white/10 text-zinc-100" onclick="switchTab('refleksi')">Refleksi</button>
+    </div>
+
+    <!-- TAB: Artikel -->
+    <div id="tab-artikel" class="space-y-4">
+      <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+        <h3 class="font-semibold text-[var(--gold)] mb-2">Artikel SKI: Pentingnya Sejarah Islam</h3>
+        <p class="text-sm text-zinc-300">Baca versi PDF yang sudah kamu upload.</p>
+        <div class="mt-3 flex flex-wrap gap-3">
+          <!-- gunakan file root: ArtikelSki.pdf -->
+          <a href="ArtikelSki.pdf" target="_blank" class="inline-flex items-center gap-2 bg-[var(--gold)] text-black font-semibold px-4 py-2 rounded-lg hover:brightness-110">
+            Buka PDF <i class="ph ph-arrow-up-right"></i>
+          </a>
+          <a href="ArtikelSki.pdf" download class="inline-flex items-center gap-2 bg-white/10 text-zinc-100 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/20">
+            Unduh <i class="ph ph-download-simple"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: Kisah -->
+    <div id="tab-kisah" class="hidden space-y-4">
+      <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+        <h3 class="font-semibold text-[var(--gold)] mb-2">Kisah: Khalid bin Walid — “Pedang Allah”</h3>
+        <p class="text-sm text-zinc-300 leading-relaxed">
+          Khalid bin Walid dikenal dengan strategi cepat, keberanian tinggi, dan keteguhan iman.
+          Dari Mu’tah hingga Yarmuk, beliau menunjukkan bagaimana kepemimpinan, disiplin pasukan,
+          dan ketaatan pada komando menjadi kunci kemenangan. Pelajarannya untuk kita: persiapkan
+          diri, bergerak dengan rencana, dan tawakkal di puncaknya.
+        </p>
+      </div>
+    </div>
+
+    <!-- TAB: Refleksi -->
+    <div id="tab-refleksi" class="hidden space-y-4">
+      <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+        <h3 class="font-semibold text-[var(--gold)] mb-2">Refleksi: Ceritaku Berjuang di NJ Bali</h3>
+        <p class="text-sm text-zinc-300 leading-relaxed">
+          Di NJ Bali aku belajar bahwa perjuangan bukan cuma soal nama besar. Bangun pagi, disiplin
+          kelas, amanah kecil—semua ditempa jadi kebiasaan baik. Saat rindu rumah datang, kami saling
+          menguatkan; saat lelah belajar, kami ingat tujuan: ridha Allah dan bermanfaat bagi umat.
+          Bukan tentang gelar, tapi keberanian menjaga istiqamah setiap hari.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🎭 MODAL MINI DRAMA -->
+<div id="modal-drama" class="modal">
+  <div class="modal-content max-w-2xl w-[92vw] max-h-[85vh] overflow-y-auto">
+    <button class="modal-close" onclick="closeModal('modal-drama')">&times;</button>
+    <h2 class="text-2xl font-bold mb-2 text-[var(--gold)]">🎭 Mini Drama</h2>
+    <p class="text-zinc-300 mb-4">Drama pendek menghidupkan peristiwa sejarah.</p>
+
+    <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+      <h3 class="font-semibold text-zinc-100 mb-2">Perang Yamamah</h3>
+      <p class="text-sm text-zinc-300 mb-3">Video drama santri — silakan ganti sumber jika nama file berbeda.</p>
+      <video controls class="w-full rounded-lg border border-white/10">
+        <!-- ganti src ini dengan file videomu jika beda -->
+        <source src="assets/perang_yamamah.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- ✍️ MODAL KARYA SANTRI -->
+<div id="modal-karya" class="modal">
+  <div class="modal-content max-w-2xl w-[92vw] max-h-[85vh] overflow-y-auto">
+    <button class="modal-close" onclick="closeModal('modal-karya')">&times;</button>
+    <h2 class="text-2xl font-bold mb-2 text-[var(--gold)]">✍️ Karya Santri</h2>
+    <p class="text-zinc-300 mb-4">Puisi & tulisan santri tentang menuntut ilmu.</p>
+
+    <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+      <h3 class="font-semibold text-zinc-100 mb-2">Puisi: “Jalan Santri”</h3>
+      <blockquote class="text-sm text-zinc-300 leading-relaxed">
+        Buku kupeluk di dini hari,<br>
+        Doa ibunda mengiringi langkah kaki.<br>
+        Jarak jauh bukan halangi mimpi,<br>
+        Ilmu kutuntut demi ridha Ilahi.
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<!-- 📢 MODAL PUBLIKASI -->
+<div id="modal-publikasi" class="modal">
+  <div class="modal-content max-w-2xl w-[92vw] max-h-[85vh] overflow-y-auto">
+    <button class="modal-close" onclick="closeModal('modal-publikasi')">&times;</button>
+    <h2 class="text-2xl font-bold mb-2 text-[var(--gold)]">📢 Publikasi</h2>
+    <p class="text-zinc-300 mb-4">Ikuti update & rilisan konten di media sosial.</p>
+
+    <div class="bg-black/30 rounded-lg p-4 border border-white/10">
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="ph ph-instagram-logo text-[var(--gold)] text-lg"></i>
+          <a href="https://www.instagram.com/irvnafndi/" target="_blank" class="text-[var(--gold)] hover:underline">Instagram @irvnafndi</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="ph ph-tiktok-logo text-[var(--gold)] text-lg"></i>
+          <a href="https://www.tiktok.com/@afaniyah_" target="_blank" class="text-[var(--gold)] hover:underline">TikTok @afaniyah_</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== JS (Modal + Tab) ========== -->
 <script>
-  // Tab Function
-  const tabs = document.querySelectorAll(".tab-btn");
-  const contents = document.querySelectorAll(".tab-content");
+  // Modal helpers (pakai yang ini; kalau kamu sudah punya openModal/closeModal sebelumnya, cukup gunakan salah satu)
+  function openModal(id){ document.getElementById(id).style.display='flex'; }
+  function closeModal(id){ document.getElementById(id).style.display='none'; }
 
-  tabs.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      let target = btn.getAttribute("data-tab");
-
-      tabs.forEach(b => b.classList.remove("text-blue-600", "font-semibold"));
-      btn.classList.add("text-blue-600", "font-semibold");
-
-      contents.forEach(c => c.classList.add("hidden"));
-      document.getElementById(target).classList.remove("hidden");
+  // Tab switcher untuk E-Book SKI
+  function switchTab(name){
+    const tabs = ['artikel','kisah','refleksi'];
+    tabs.forEach(t=>{
+      document.getElementById('tab-'+t).classList.toggle('hidden', t!==name);
+      document.getElementById('tabbtn-'+t).classList.toggle('bg-[var(--gold)]', t===name);
+      document.getElementById('tabbtn-'+t).classList.toggle('text-black', t===name);
+      document.getElementById('tabbtn-'+t).classList.toggle('bg-white/10', t!==name);
+      document.getElementById('tabbtn-'+t).classList.toggle('text-zinc-100', t!==name);
     });
-  });
+  }
 </script>
 
 <style>
