@@ -118,53 +118,85 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- E-Book SKI -->
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">📖 E-Book SKI</h3>
-        <p class="text-gray-600 mb-4">Wadah utama berisi tiga bagian: artikel, kisah, dan refleksi.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><b>Artikel</b> → <a href="artikelkuski.pdf" target="_blank" class="text-blue-600 hover:underline">artikelkuski.pdf</a></li>
-          <li><b>Kisah</b> → <i>Khalid bin Walid: Pedang Allah yang Terhunus</i></li>
-          <li><b>Refleksi</b> → <i>Catatan Perjuangan di NJ Bali</i></li>
-        </ul>
-        <span class="px-3 py-1 text-sm rounded-full bg-yellow-100 text-yellow-700">Proses</span>
+  <section id="projects" class="py-10 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-5">
+    <h2 class="text-3xl font-bold text-center mb-10">⚔️ Projek</h2>
+
+    <!-- E-Book SKI -->
+    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
+      <h3 class="text-xl font-bold mb-3">📖 E-Book SKI</h3>
+      <p class="text-gray-600 mb-3">Kumpulan artikel, kisah tokoh, dan refleksi sejarah Islam.</p>
+      
+      <!-- Tab Menu -->
+      <div class="flex gap-3 border-b mb-4">
+        <button class="tab-btn text-blue-600 font-semibold" data-tab="artikel">Artikel</button>
+        <button class="tab-btn text-gray-500" data-tab="kisah">Kisah</button>
+        <button class="tab-btn text-gray-500" data-tab="refleksi">Refleksi</button>
       </div>
 
-      <!-- Mini Drama -->
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">🎭 Mini Drama</h3>
-        <p class="text-gray-600 mb-4">Drama pendek karya santri NJ Bali. Saat ini: <i>Drama Perang Yamamah</i>.</p>
-        <span class="px-3 py-1 text-sm rounded-full bg-green-100 text-green-700">Ada</span>
+      <!-- Tab Content -->
+      <div class="tab-content" id="artikel">
+        <p class="text-gray-700">📑 Artikel SKI (PDF): <a href="assets/ArtikelSKI.pdf" class="text-blue-600 underline">Baca di sini</a></p>
       </div>
-
-      <!-- Karya Santri -->
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">✍️ Karya Santri</h3>
-        <p class="text-gray-600 mb-4">Puisi, tulisan, dan karya kreatif santri.</p>
-        <blockquote class="italic text-gray-700 border-l-4 border-gray-300 pl-4 mb-4">
-          "Menuntut ilmu sepanjang hayat,<br>
-          Di pondok hati ditempa kuat,<br>
-          Sabar jadi cahaya penuntun,<br>
-          Santri berjuang demi ridha Tuhan."
-        </blockquote>
-        <span class="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-700">Rencana</span>
+      <div class="tab-content hidden" id="kisah">
+        <p class="text-gray-700">📜 Kisah Khalid bin Walid dalam Perang Yamamah</p>
       </div>
-
-      <!-- Publikasi -->
-      <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-2">📢 Publikasi</h3>
-        <p class="text-gray-600 mb-4">Menyebarkan karya melalui media digital.</p>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>Instagram: <a href="https://instagram.com/akunmu" target="_blank" class="text-blue-600 hover:underline">@akunmu</a></li>
-          <li>TikTok: <a href="https://tiktok.com/@akunmu" target="_blank" class="text-blue-600 hover:underline">@akunmu</a></li>
-          <li>YouTube & Forum NJ Bali</li>
-        </ul>
-        <span class="px-3 py-1 text-sm rounded-full bg-purple-100 text-purple-700">Coming Soon</span>
+      <div class="tab-content hidden" id="refleksi">
+        <p class="text-gray-700">🌿 Refleksi: Ceritaku Berjuang di NJ Bali</p>
       </div>
+    </div>
 
+    <!-- Mini Drama -->
+    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
+      <h3 class="text-xl font-bold mb-3">🎭 Mini Drama Sejarah</h3>
+      <p class="text-gray-600 mb-3">Drama pendek tentang peristiwa besar sejarah Islam.</p>
+      <video controls class="rounded-xl w-full">
+        <source src="assets/perang_yamamah.mp4" type="video/mp4">
+        Browser tidak mendukung video.
+      </video>
+    </div>
+
+    <!-- Karya Santri -->
+    <div class="bg-white shadow-md rounded-2xl p-5 mb-8">
+      <h3 class="text-xl font-bold mb-3">✍️ Karya Santri</h3>
+      <p class="text-gray-600 mb-3">Puisi karya santri NJ Bali yang penuh semangat menuntut ilmu.</p>
+      <blockquote class="italic text-gray-700 border-l-4 border-blue-500 pl-4">
+        "Santri berjalan dengan kitab di tangan,  
+        Ilmu jadi cahaya di gelap malam.  
+        Meski jauh dari rumah dan keluarga,  
+        Ridha Allah tujuan utama."
+      </blockquote>
+    </div>
+
+    <!-- Publikasi -->
+    <div class="bg-white shadow-md rounded-2xl p-5">
+      <h3 class="text-xl font-bold mb-3">📢 Publikasi</h3>
+      <p class="text-gray-600 mb-3">Temukan konten sejarah & karya santri di media sosial:</p>
+      <div class="flex gap-5">
+        <a href="https://www.instagram.com/username" target="_blank" class="text-pink-600 font-semibold hover:underline">Instagram</a>
+        <a href="https://www.tiktok.com/@username" target="_blank" class="text-black font-semibold hover:underline">TikTok</a>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Tab Function
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let target = btn.getAttribute("data-tab");
+
+      tabs.forEach(b => b.classList.remove("text-blue-600", "font-semibold"));
+      btn.classList.add("text-blue-600", "font-semibold");
+
+      contents.forEach(c => c.classList.add("hidden"));
+      document.getElementById(target).classList.remove("hidden");
+    });
+  });
+</script>
 
 <style>
   /* Animasi fade-in tab */
