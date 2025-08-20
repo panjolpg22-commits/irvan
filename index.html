@@ -132,34 +132,20 @@
       <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
         <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
         <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
-        <button onclick="toggleAccordion('ebook-accordion')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
-        <div id="ebook-accordion" class="mt-4 hidden">
-          <div class="mt-2">
-            <h4 class="font-semibold text-[var(--gold)]">Artikel</h4>
-            <a href="pdf/artikelski/ArtikelSKI.pdf" class="text-yellow-400 hover:underline">Artikel SKI: Pentingnya Sejarah Islam</a>
-          </div>
-          <div class="mt-2">
-            <h4 class="font-semibold text-[var(--gold)]">Kisah</h4>
-            <p class="text-zinc-300">Kisah Khalid bin Walid: Pedang Allah yang Terhunus</p>
-          </div>
-          <div class="mt-2">
-            <h4 class="font-semibold text-[var(--gold)]">Refleksi</h4>
-            <p class="text-zinc-300">Cerita Perjuangan di NJ Bali: Santri yang Berjuang</p>
-          </div>
-        </div>
+        <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
       </div>
 
       <!-- Mini Drama -->
       <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
         <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
-        <p class="mt-2 text-sm text-zinc-300">Drama pendek karya santri NJ Bali. Saat ini: Drama Perang Yamamah.</p>
+        <p class="mt-2 text-sm text-zinc-300">Drama pendek karya santri NJ Bali: Perang Yamamah.</p>
         <a href="assets/snaptik_7440809015132687671_v2.mp4" class="mt-4 inline-block bg-[var(--gold)] text-black py-2 px-4 rounded-lg">Tonton Video</a>
       </div>
 
       <!-- Karya Santri -->
       <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
         <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
-        <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, dan karya kreatif santri.</p>
+        <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, dan karya kreatif santri:</p>
         <blockquote class="mt-4 text-zinc-100 italic">
           "Menuntut ilmu sepanjang hayat, di pondok hati ditempa kuat, sabar jadi cahaya penuntun, santri berjuang demi ridha Tuhan."
         </blockquote>
@@ -168,7 +154,7 @@
       <!-- Publikasi -->
       <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
         <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
-        <p class="mt-2 text-sm text-zinc-300">Menyebarkan karya melalui media digital.</p>
+        <p class="mt-2 text-sm text-zinc-300">Menyebarkan karya melalui media digital:</p>
         <div class="mt-4 flex flex-col gap-2">
           <a href="https://www.instagram.com/irvnafndi/" class="text-pink-400 hover:underline">Instagram</a>
           <a href="https://www.tiktok.com/@afaniyah_" class="text-red-400 hover:underline">TikTok</a>
@@ -179,12 +165,44 @@
   </div>
 </section>
 
+<!-- MODAL E-BOOK SKI -->
+<div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-center hidden z-50">
+  <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative">
+    <button onclick="closeModal('modal-ebook')" class="absolute top-4 right-4 text-[var(--gold)] text-2xl font-bold">&times;</button>
+    <h3 class="text-2xl font-semibold text-[var(--gold)] mb-4">📖 E-Book SKI</h3>
+    <div class="flex gap-4 mb-4">
+      <button onclick="showTab('artikel')" class="tab-btn bg-[var(--gold)] text-black px-3 py-1 rounded-lg">Artikel</button>
+      <button onclick="showTab('kisah')" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg">Kisah</button>
+      <button onclick="showTab('refleksi')" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg">Refleksi</button>
+    </div>
+    <div id="tab-artikel">
+      <a href="pdf/artikelski/ArtikelSKI.pdf" class="text-yellow-400 hover:underline">Artikel SKI: Pentingnya Sejarah Islam (PDF)</a>
+    </div>
+    <div id="tab-kisah" class="hidden">
+      <p class="text-zinc-300">Kisah Khalid bin Walid: Pedang Allah yang Terhunus</p>
+    </div>
+    <div id="tab-refleksi" class="hidden">
+      <p class="text-zinc-300">Cerita Perjuangan di NJ Bali: Santri yang Berjuang</p>
+    </div>
+  </div>
+</div>
+
 <script>
-  function toggleAccordion(id) {
-    const el = document.getElementById(id);
-    el.classList.toggle('hidden');
+  function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+  function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+  function showTab(tab) {
+    const tabs = ['artikel','kisah','refleksi'];
+    tabs.forEach(t => {
+      document.getElementById('tab-'+t).classList.add('hidden');
+      document.querySelector(`button[onclick="showTab('${t}')"]`).classList.remove('bg-[var(--gold)'] );
+      document.querySelector(`button[onclick="showTab('${t}')"]`).classList.add('bg-zinc-800');
+    });
+    document.getElementById('tab-'+tab).classList.remove('hidden');
+    document.querySelector(`button[onclick="showTab('${tab}')"]`).classList.add('bg-[var(--gold)]');
+    document.querySelector(`button[onclick="showTab('${tab}')"]`).classList.remove('bg-zinc-800');
   }
 </script>
+
 
 <style>
   /* Animasi fade-in tab */
