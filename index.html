@@ -96,74 +96,78 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projek" class="relative bg-projects py-24">
-      <div class="overlay">
-        <div class="mx-auto max-w-6xl px-4">
-          <div class="text-center mb-10 fade-in">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] tracking-wide">Project — Panglima Islam</h2>
-            <p class="mt-3 text-zinc-200 max-w-2xl mx-auto">Menghidupkan semangat para panglima: keberanian, ilmu, dan iman. Konten sejarah dikemas modern untuk generasi hari ini.</p>
-          </div>
+    <!-- =================== PERPUSTAKAAN DIGITAL =================== -->
+<section id="perpustakaan" class="py-24 bg-[#0f0f12]">
+  <div class="mx-auto max-w-6xl px-4 text-center">
+    <h2 class="text-3xl font-bold text-[var(--gold)] mb-10">📚 Perpustakaan Digital</h2>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Tabs -->
+    <div class="flex justify-center space-x-4 mb-8">
+      <button onclick="showTab('artikel')" class="tab-btn active-tab">Artikel</button>
+      <button onclick="showTab('kisah')" class="tab-btn">Kisah</button>
+      <button onclick="showTab('refleksi')" class="tab-btn">Refleksi</button>
+    </div>
 
-            <article class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer" onclick="openModal('modal1')">
-              <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
-              <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, refleksi, kisah tokoh & perang Islam untuk santri zaman sekarang.</p>
-              <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Proses</span>
-            </article>
-
-            <article class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer" style="animation-delay:.08s" onclick="openModal('modal2')">
-              <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
-              <p class="mt-2 text-sm text-zinc-300">Drama pendek yang menghidupkan kisah para panglima.</p>
-              <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Ada</span>
-            </article>
-
-            <article class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer" style="animation-delay:.16s" onclick="openModal('modal3')">
-              <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
-              <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, atau gambar hasil kolaborasi adik-adik santri.</p>
-              <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Rencana</span>
-            </article>
-
-            <article class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer" style="animation-delay:.24s" onclick="openModal('modal4')">
-              <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
-              <p class="mt-2 text-sm text-zinc-300">Menyebarkan karya di IG, TikTok, YouTube & forum diskusi santri NJ Bali.</p>
-              <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Coming Soon</span>
-            </article>
-
-          </div>
-        </div>
+    <!-- Artikel -->
+    <div id="tab-artikel" class="tab-content">
+      <div class="glass p-6 rounded-2xl text-left">
+        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Artikel</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="pdf/artikel/ArtikelSki.pdf" target="_blank" class="hover:underline">Pentingnya Sejarah Islam</a></li>
+          <li><a href="pdf/artikel/ArtikelUmar.pdf" target="_blank" class="hover:underline">Umar bin Khattab</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-  <div class="space-y-6">
-  <!-- Artikel -->
-  <div>
-    <h3 class="text-xl font-semibold text-[var(--gold)] mb-2">Artikel</h3>
-    <ul class="list-disc list-inside space-y-1 text-white">
-      <li><a href="pdf/artikel/ArtikelKhalid.pdf" target="_blank" class="hover:underline">Khalid bin Walid</a></li>
-      <li><a href="pdf/artikel/ArtikelUmar.pdf" target="_blank" class="hover:underline">Umar bin Khattab</a></li>
-    </ul>
-  </div>
+    <!-- Kisah -->
+    <div id="tab-kisah" class="tab-content hidden">
+      <div class="glass p-6 rounded-2xl text-left">
+        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Kisah</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="pdf/kisah/KisahYamamah.pdf" target="_blank" class="hover:underline">Perang Yamamah</a></li>
+          <li><a href="pdf/kisah/KisahBadar.pdf" target="_blank" class="hover:underline">Perang Badar</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- Kisah -->
-  <div>
-    <h3 class="text-xl font-semibold text-[var(--gold)] mb-2">Kisah</h3>
-    <ul class="list-disc list-inside space-y-1 text-white">
-      <li><a href="pdf/kisah/KisahYamamah.pdf" target="_blank" class="hover:underline">Perang Yamamah</a></li>
-      <li><a href="pdf/kisah/KisahBadar.pdf" target="_blank" class="hover:underline">Perang Badar</a></li>
-    </ul>
+    <!-- Refleksi -->
+    <div id="tab-refleksi" class="tab-content hidden">
+      <div class="glass p-6 rounded-2xl text-left">
+        <h3 class="text-xl font-semibold text-[var(--gold)] mb-4">Refleksi</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="pdf/refleksi/RefleksiPondok.pdf" target="_blank" class="hover:underline">Refleksi Pondok</a></li>
+          <li><a href="pdf/refleksi/RefleksiSantri.pdf" target="_blank" class="hover:underline">Refleksi Santri</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- Refleksi -->
-  <div>
-    <h3 class="text-xl font-semibold text-[var(--gold)] mb-2">Refleksi</h3>
-    <ul class="list-disc list-inside space-y-1 text-white">
-      <li><a href="pdf/refleksi/RefleksiPondok.pdf" target="_blank" class="hover:underline">Refleksi Pondok</a></li>
-      <li><a href="pdf/refleksi/RefleksiSantri.pdf" target="_blank" class="hover:underline">Refleksi Santri</a></li>
-    </ul>
-  </div>
-</div>
+<!-- ========== STYLE UNTUK TAB ========== -->
+<style>
+  .tab-btn {
+    @apply px-4 py-2 rounded-xl border border-[var(--gold)] text-[var(--gold)] transition;
+  }
+  .tab-btn:hover {
+    @apply bg-[var(--gold)] text-black;
+  }
+  .active-tab {
+    @apply bg-[var(--gold)] text-black;
+  }
+</style>
+
+<!-- ========== SCRIPT TAB ========== -->
+<script>
+  function showTab(tab) {
+    // sembunyikan semua tab
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active-tab'));
+
+    // tampilkan tab terpilih
+    document.getElementById(`tab-${tab}`).classList.remove('hidden');
+    event.target.classList.add('active-tab');
+  }
+</script>
 
 <style>
   /* Animasi fade-in tab */
