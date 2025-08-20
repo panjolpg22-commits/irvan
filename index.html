@@ -122,77 +122,85 @@
   <div class="max-w-5xl mx-auto px-5">
     <h2 class="text-3xl font-bold text-center mb-10">⚔️ Projek</h2>
 
- <!-- SECTION PROJECT -->
-<section id="projects" class="py-12 bg-gray-900 text-yellow-400">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">⚔️ Projek</h2>
+<!-- PROJEK SECTION -->
+<section id="projek" class="relative bg-[#0b0b0e] py-24">
+  <div class="mx-auto max-w-6xl px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] tracking-wide">⚔️ Project — Panglima Islam</h2>
+      <p class="mt-3 text-zinc-200 max-w-2xl mx-auto">Menghidupkan semangat para panglima: keberanian, ilmu, dan iman. Konten sejarah dikemas modern untuk generasi hari ini.</p>
+    </div>
 
-    <!-- GRID PROJECT -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- EBOOK -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h3 class="text-xl font-bold mb-2">📖 E-Book SKI</h3>
-        <p class="mb-4">Kumpulan artikel, refleksi, dan kisah tokoh & perang Islam untuk santri zaman sekarang.</p>
-        <button onclick="toggleEbook()" class="bg-yellow-500 text-black px-4 py-2 rounded-xl font-semibold hover:bg-yellow-400 transition">Lihat Isi</button>
+      <!-- E-Book SKI -->
+      <div class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer">
+        <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
+        <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, refleksi, kisah tokoh & perang Islam untuk santri zaman sekarang.</p>
+        <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Proses</span>
+        <button onclick="toggleEbook()" class="mt-4 w-full bg-[var(--gold)] text-black font-semibold py-2 rounded-lg hover:brightness-110 transition">Lihat Isi</button>
 
-        <!-- Dropdown isi ebook -->
-        <div id="ebookContent" class="hidden mt-4 space-y-3">
-          <button onclick="toggleContent('artikel')" class="block w-full text-left hover:underline">📑 Artikel</button>
-          <div id="artikel" class="hidden bg-gray-700 p-4 rounded-xl text-sm leading-relaxed">
-            <h4 class="font-bold mb-2">Artikel SKI: Pentingnya Sejarah Islam</h4>
-            <p>
-              Sejarah Kebudayaan Islam adalah cermin perjalanan umat, mengajarkan bagaimana iman, ilmu, dan perjuangan membentuk peradaban. 
-              Santri perlu mempelajarinya agar memiliki identitas kuat, semangat juang, dan teladan dari tokoh-tokoh besar Islam.
-            </p>
+        <!-- Accordion isi E-Book -->
+        <div id="ebookContent" class="mt-4 hidden space-y-3 text-zinc-100">
+          <div>
+            <h4 class="font-semibold text-[var(--gold)]">📑 Artikel</h4>
+            <ul class="list-disc list-inside ml-4">
+              <li><a href="pdf/artikelski/ArtikelSKI.pdf" target="_blank" class="hover:underline">Artikel SKI: Pentingnya Sejarah Islam</a></li>
+            </ul>
           </div>
-
-          <button onclick="toggleContent('kisah')" class="block w-full text-left hover:underline">📜 Kisah</button>
-          <div id="kisah" class="hidden bg-gray-700 p-4 rounded-xl text-sm leading-relaxed">
-            <p>Belum ada kisah dimasukkan. (Nanti bisa ditambah Perang Yamamah, Badar, Uhud, dll.)</p>
+          <div>
+            <h4 class="font-semibold text-[var(--gold)]">📜 Kisah</h4>
+            <ul class="list-disc list-inside ml-4">
+              <li><a href="#" class="hover:underline">Kisah Khalid bin Walid</a></li>
+            </ul>
           </div>
-
-          <button onclick="toggleContent('refleksi')" class="block w-full text-left hover:underline">🌿 Refleksi</button>
-          <div id="refleksi" class="hidden bg-gray-700 p-4 rounded-xl text-sm leading-relaxed">
-            <p>Belum ada refleksi dimasukkan. (Contoh: Refleksi Pondok, Refleksi Santri.)</p>
+          <div>
+            <h4 class="font-semibold text-[var(--gold)]">🌿 Refleksi</h4>
+            <ul class="list-disc list-inside ml-4">
+              <li><a href="#" class="hover:underline">Cerita: Berjuang di NJ Bali</a></li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- MINI DRAMA -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h3 class="text-xl font-bold mb-2">🎭 Mini Drama</h3>
-        <p class="mb-4">Drama pendek yang menghidupkan kisah para panglima.</p>
-        <p class="text-sm italic">Status: Ada</p>
+      <!-- Mini Drama -->
+      <div class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer">
+        <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
+        <p class="mt-2 text-sm text-zinc-300">Drama pendek yang menghidupkan kisah para panglima.</p>
+        <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Ada</span>
+        <a href="assets/snaptik_7440809015132687671_v2.mp4" target="_blank" class="mt-4 inline-block bg-[var(--gold)] text-black font-semibold py-2 px-4 rounded-lg hover:brightness-110 transition">Tonton Video</a>
       </div>
 
-      <!-- KARYA SANTRI -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h3 class="text-xl font-bold mb-2">✍️ Karya Santri</h3>
-        <p class="mb-4">Puisi, tulisan, atau gambar hasil kolaborasi adik-adik santri.</p>
-        <p class="text-sm italic">Status: Rencana</p>
+      <!-- Karya Santri -->
+      <div class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer">
+        <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
+        <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, atau gambar hasil kolaborasi adik-adik santri.</p>
+        <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Rencana</span>
+        <div class="mt-4">
+          <p class="italic text-zinc-100">"Santri menuntut ilmu, menapaki jalan cahaya, semangat tak pernah padam."</p>
+        </div>
       </div>
 
-      <!-- PUBLIKASI -->
-      <div class="bg-gray-800 rounded-2xl shadow-lg p-6">
-        <h3 class="text-xl font-bold mb-2">📢 Publikasi</h3>
-        <p class="mb-4">Menyebarkan karya di IG, TikTok, YouTube & forum santri NJ Bali.</p>
-        <p class="text-sm italic">Status: Coming Soon</p>
+      <!-- Publikasi -->
+      <div class="glass rounded-2xl p-6 border border-white/10 slide-up card-hover cursor-pointer">
+        <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
+        <p class="mt-2 text-sm text-zinc-300">Menyebarkan karya di IG, TikTok, YouTube & forum diskusi santri NJ Bali.</p>
+        <span class="mt-4 inline-flex w-fit rounded-full bg-white/10 px-3 py-1 text-xs">Status: Coming Soon</span>
+        <div class="mt-4 flex gap-3 text-2xl">
+          <a href="https://www.instagram.com/irvnafndi/" class="hover:text-pink-400 transition"><i class="ph ph-instagram-logo"></i></a>
+          <a href="https://www.tiktok.com/@afaniyah_" class="hover:text-red-400 transition"><i class="ph ph-tiktok-logo"></i></a>
+        </div>
       </div>
+
     </div>
   </div>
-</section>
 
-<!-- JS untuk toggle -->
-<script>
-function toggleEbook() {
-  document.getElementById("ebookContent").classList.toggle("hidden");
-}
-function toggleContent(id) {
-  let el = document.getElementById(id);
-  el.classList.toggle("hidden");
-}
-</script>
+  <script>
+    function toggleEbook() {
+      const content = document.getElementById('ebookContent');
+      content.classList.toggle('hidden');
+    }
+  </script>
+</section>
 
 <style>
   /* Animasi fade-in tab */
