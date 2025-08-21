@@ -164,13 +164,20 @@
   </div>
 </section>
 
-<!-- MODAL E-BOOK SKI -->
-<div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-start pt-24 hidden z-50">
-  <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative">
+<!-- E-Book SKI Card -->
+<div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+  <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
+  <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
+  <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
+</div>
+
+<!-- MODAL E-BOOK FIXED OVERLAY -->
+<div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-center hidden z-50">
+  <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
     <button onclick="closeModal('modal-ebook')" class="absolute top-4 right-4 text-[var(--gold)] text-2xl font-bold">&times;</button>
     <h3 class="text-2xl font-semibold text-[var(--gold)] mb-4">📖 E-Book SKI</h3>
 
-    <!-- Tab Buttons -->
+    <!-- Tabs Buttons -->
     <div class="flex gap-4 mb-4">
       <button id="btn-artikel" class="tab-btn bg-[var(--gold)] text-black px-3 py-1 rounded-lg" onclick="showTab('artikel')">Artikel</button>
       <button id="btn-kisah" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg" onclick="showTab('kisah')">Kisah</button>
@@ -190,7 +197,7 @@
   </div>
 </div>
 
-<!-- SCRIPT -->
+<!-- SCRIPT MODAL & TAB -->
 <script>
   function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
   function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
