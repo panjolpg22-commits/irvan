@@ -127,100 +127,115 @@
     <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] text-center mb-12">⚔️ Projek Panglima Islam</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- E-Book SKI -->
-      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
-        <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
-        <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
-      </div>
+   <section id="projek" class="bg-[#0b0b0e] py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] text-center mb-12">⚔️ Projek Panglima Islam</h2>
+    <div class="grid md:grid-cols-2 gap-6">
 
-      <!-- Mini Drama -->
-      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
-        <p class="mt-2 text-sm text-zinc-300">Drama pendek karya santri NJ Bali: Perang Yamamah.</p>
-        <a href="assets/snaptik_7440809015132687671_v2.mp4" class="mt-4 inline-block bg-[var(--gold)] text-black py-2 px-4 rounded-lg">Tonton Video</a>
-      </div>
-
-      <!-- Karya Santri -->
-      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
-        <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, dan karya kreatif santri:</p>
-        <blockquote class="mt-4 text-zinc-100 italic max-h-60 overflow-y-auto">
-          "Menuntut ilmu sepanjang hayat, di pondok hati ditempa kuat, sabar jadi cahaya penuntun, santri berjuang demi ridha Tuhan."
-        </blockquote>
-      </div>
-
-      <!-- Publikasi -->
-      <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
-        <p class="mt-2 text-sm text-zinc-300">Menyebarkan karya melalui media digital:</p>
-        <div class="mt-4 flex flex-col gap-2">
-          <a href="https://www.instagram.com/irvnafndi/" class="text-pink-400 hover:underline">Instagram</a>
-          <a href="https://www.tiktok.com/@afaniyah_" class="text-red-400 hover:underline">TikTok</a>
+      <!-- Kiri: Daftar Projek -->
+      <div class="space-y-6">
+        <div id="ebookBox" class="projek-box bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300" onclick="showDetail('ebook')">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
+          <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi sejarah Islam.</p>
         </div>
+
+        <div id="dramaBox" class="projek-box bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300" onclick="showDetail('drama')">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">🎭 Mini Drama</h3>
+          <p class="mt-2 text-sm text-zinc-300">Drama pendek karya santri NJ Bali: Perang Yamamah.</p>
+        </div>
+
+        <div id="karyaBox" class="projek-box bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300" onclick="showDetail('karya')">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
+          <p class="mt-2 text-sm text-zinc-300">Puisi, kata-kata, dan anekdot karya santri.</p>
+        </div>
+
+        <div id="publikasiBox" class="projek-box bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300" onclick="showDetail('publikasi')">
+          <h3 class="text-xl font-semibold text-[var(--gold)]">📢 Publikasi</h3>
+          <p class="mt-2 text-sm text-zinc-300">Link media digital santri.</p>
+        </div>
+      </div>
+
+      <!-- Kanan: Detail Projek -->
+      <div id="projekDetail" class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg min-h-[300px] text-zinc-300 overflow-y-auto transition-opacity duration-500 opacity-0 relative">
+        <button id="closeDetail" class="absolute top-4 right-4 text-[var(--gold)] text-xl font-bold hidden hover:text-white transition-colors duration-300" onclick="closeDetail()">&times;</button>
+        <p>Pilih salah satu projek untuk melihat detail.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CARD E-BOOK SKI -->
-<div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-  <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
-  <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
-  <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
-</div>
-
-<!-- MODAL E-BOOK - PASTIKAN DI TEMPATKAN DI PALING BAWAH BODY -->
-<div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-center hidden z-50">
-  <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
-    <button onclick="closeModal('modal-ebook')" class="absolute top-4 right-4 text-[var(--gold)] text-2xl font-bold">&times;</button>
-    <h3 class="text-2xl font-semibold text-[var(--gold)] mb-4">📖 E-Book SKI</h3>
-
-    <!-- TABS -->
-    <div class="flex gap-4 mb-4">
-      <button id="btn-artikel" class="tab-btn bg-[var(--gold)] text-black px-3 py-1 rounded-lg" onclick="showTab('artikel')">Artikel</button>
-      <button id="btn-kisah" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg" onclick="showTab('kisah')">Kisah</button>
-      <button id="btn-refleksi" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg" onclick="showTab('refleksi')">Refleksi</button>
-    </div>
-
-    <!-- TAB CONTENT -->
-    <div id="tab-artikel" class="tab-content">
-      <a href="pdf/artikelski/ArtikelSKI.pdf" target="_blank" class="text-yellow-400 hover:underline">📄 Artikel SKI: Pentingnya Sejarah Islam (PDF)</a>
-    </div>
-
-    <div id="tab-kisah" class="tab-content hidden max-h-80 overflow-y-auto text-zinc-300">
-      <h4 class="text-lg font-semibold mb-2 text-[var(--gold)]">Kisah Khalid bin Walid</h4>
-      <p>Khalid bin Walid dikenal sebagai Panglima Islam yang tak terkalahkan dalam banyak pertempuran. Strategi, keberanian, dan keteguhan imannya menjadi teladan bagi generasi Muslim berikutnya.</p>
-    </div>
-
-    <div id="tab-refleksi" class="tab-content hidden max-h-80 overflow-y-auto text-zinc-300">
-      <h4 class="text-lg font-semibold mb-2 text-[var(--gold)]">Refleksi Santri NJ Bali</h4>
-      <p>Perjalanan santri di pondok NJ Bali penuh tantangan. Kesabaran, ketekunan, dan disiplin menjadi fondasi utama dalam menuntut ilmu dan membentuk karakter.</p>
-      <p>Setiap ujian—baik dalam belajar, kepemimpinan, maupun interaksi sosial—menjadi pelajaran berharga. Dengan doa dan tawakal, santri belajar untuk mengandalkan Allah dalam setiap langkah hidup.</p>
-      <p>Refleksi ini bertujuan mengingatkan kita bahwa perjuangan di pondok bukan sekadar menuntut ilmu, tapi juga membentuk pribadi yang siap menghadapi dunia dengan iman dan akhlak mulia.</p>
-    </div>
-  </div>
-</div>
-
-<!-- SCRIPT MODAL & TAB -->
 <script>
-  function openModal(id) {
-    document.getElementById(id).classList.remove('hidden');
+  const detailData = {
+    ebook: `
+      <h4 class="text-2xl font-bold text-[var(--gold)] mb-3">📖 E-Book SKI</h4>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="pdf/artikelski/ArtikelSKI.pdf" target="_blank" class="text-yellow-400 hover:underline">Artikel SKI (PDF)</a></li>
+        <li>Kisah Khalid bin Walid</li>
+        <li>Refleksi Santri NJ Bali</li>
+      </ul>
+    `,
+    drama: `
+      <h4 class="text-2xl font-bold text-[var(--gold)] mb-3">🎭 Mini Drama</h4>
+      <video controls class="w-full rounded-lg">
+        <source src="assets/snaptik_7440809015132687671_v2.mp4" type="video/mp4">
+      </video>
+    `,
+    karya: `
+      <h4 class="text-2xl font-bold text-[var(--gold)] mb-3">✍️ Karya Santri</h4>
+      <blockquote class="italic border-l-4 border-[var(--gold)] pl-4">
+        "Menuntut ilmu sepanjang hayat, di pondok hati ditempa kuat, sabar jadi cahaya penuntun, santri berjuang demi ridha Tuhan."
+      </blockquote>
+    `,
+    publikasi: `
+      <h4 class="text-2xl font-bold text-[var(--gold)] mb-3">📢 Publikasi</h4>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="https://www.instagram.com/irvnafndi/" target="_blank" class="text-pink-400 hover:underline">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@afaniyah_" target="_blank" class="text-red-400 hover:underline">TikTok</a></li>
+      </ul>
+    `
+  };
+
+  let activeBox = null;
+
+  function showDetail(id) {
+    const detailDiv = document.getElementById('projekDetail');
+    const closeBtn = document.getElementById('closeDetail');
+
+    // Highlight projek aktif
+    if(activeBox) activeBox.classList.remove('border-4', 'border-blue-500', 'shadow-2xl');
+    activeBox = document.getElementById(id + 'Box');
+    activeBox.classList.add('border-4', 'border-blue-500', 'shadow-2xl');
+
+    // Tampilkan close button
+    closeBtn.classList.remove('hidden');
+
+    // Animasi fade-in
+    detailDiv.style.opacity = 0;
+    setTimeout(() => {
+      detailDiv.innerHTML = detailData[id] + closeBtn.outerHTML;
+      detailDiv.style.opacity = 1;
+    }, 200);
+
+    // Scroll ke detail di mobile
+    if(window.innerWidth < 768){
+      detailDiv.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
   }
-  function closeModal(id) {
-    document.getElementById(id).classList.add('hidden');
-  }
-  function showTab(tab) {
-    const tabs = ['artikel','kisah','refleksi'];
-    tabs.forEach(t => {
-      document.getElementById('tab-' + t).classList.add('hidden');
-      document.getElementById('btn-' + t).classList.remove('bg-[var(--gold)]','text-black');
-      document.getElementById('btn-' + t).classList.add('bg-zinc-800','text-[var(--gold)]');
-    });
-    document.getElementById('tab-' + tab).classList.remove('hidden');
-    document.getElementById('btn-' + tab).classList.add('bg-[var(--gold)]','text-black');
-    document.getElementById('btn-' + tab).classList.remove('bg-zinc-800','text-[var(--gold)]');
+
+  function closeDetail(){
+    const detailDiv = document.getElementById('projekDetail');
+
+    // Hapus highlight projek aktif
+    if(activeBox) activeBox.classList.remove('border-4', 'border-blue-500', 'shadow-2xl');
+    activeBox = null;
+
+    // Fade-out detail
+    detailDiv.style.opacity = 0;
+    setTimeout(() => {
+      detailDiv.innerHTML = '<p>Pilih salah satu projek untuk melihat detail.</p>';
+      detailDiv.style.opacity = 1;
+    }, 200);
   }
 </script>
 
