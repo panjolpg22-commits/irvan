@@ -164,59 +164,63 @@
   </div>
 </section>
 
-<!-- E-Book SKI Card -->
+<!-- CARD E-BOOK SKI -->
 <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
   <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
   <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
   <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
 </div>
 
-<!-- MODAL E-BOOK SKI -->
+<!-- MODAL E-BOOK - PASTIKAN DI TEMPATKAN DI PALING BAWAH BODY -->
 <div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-center hidden z-50">
   <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
     <button onclick="closeModal('modal-ebook')" class="absolute top-4 right-4 text-[var(--gold)] text-2xl font-bold">&times;</button>
     <h3 class="text-2xl font-semibold text-[var(--gold)] mb-4">📖 E-Book SKI</h3>
 
-    <!-- Tabs -->
+    <!-- TABS -->
     <div class="flex gap-4 mb-4">
       <button id="btn-artikel" class="tab-btn bg-[var(--gold)] text-black px-3 py-1 rounded-lg" onclick="showTab('artikel')">Artikel</button>
       <button id="btn-kisah" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg" onclick="showTab('kisah')">Kisah</button>
       <button id="btn-refleksi" class="tab-btn bg-zinc-800 text-[var(--gold)] px-3 py-1 rounded-lg" onclick="showTab('refleksi')">Refleksi</button>
     </div>
 
-    <!-- Tab Contents -->
+    <!-- TAB CONTENT -->
     <div id="tab-artikel" class="tab-content">
       <a href="pdf/artikelski/ArtikelSKI.pdf" target="_blank" class="text-yellow-400 hover:underline">📄 Artikel SKI: Pentingnya Sejarah Islam (PDF)</a>
     </div>
+
     <div id="tab-kisah" class="tab-content hidden max-h-80 overflow-y-auto text-zinc-300">
-      <p>Kisah Khalid bin Walid: Pedang Allah yang Terhunus...</p>
+      <h4 class="text-lg font-semibold mb-2 text-[var(--gold)]">Kisah Khalid bin Walid</h4>
+      <p>Khalid bin Walid dikenal sebagai Panglima Islam yang tak terkalahkan dalam banyak pertempuran. Strategi, keberanian, dan keteguhan imannya menjadi teladan bagi generasi Muslim berikutnya.</p>
     </div>
+
     <div id="tab-refleksi" class="tab-content hidden max-h-80 overflow-y-auto text-zinc-300">
       <h4 class="text-lg font-semibold mb-2 text-[var(--gold)]">Refleksi Santri NJ Bali</h4>
-      <p class="mb-2">Perjalanan santri di pondok NJ Bali penuh tantangan...</p>
+      <p>Perjalanan santri di pondok NJ Bali penuh tantangan. Kesabaran, ketekunan, dan disiplin menjadi fondasi utama dalam menuntut ilmu dan membentuk karakter.</p>
+      <p>Setiap ujian—baik dalam belajar, kepemimpinan, maupun interaksi sosial—menjadi pelajaran berharga. Dengan doa dan tawakal, santri belajar untuk mengandalkan Allah dalam setiap langkah hidup.</p>
+      <p>Refleksi ini bertujuan mengingatkan kita bahwa perjuangan di pondok bukan sekadar menuntut ilmu, tapi juga membentuk pribadi yang siap menghadapi dunia dengan iman dan akhlak mulia.</p>
     </div>
   </div>
 </div>
 
+<!-- SCRIPT MODAL & TAB -->
 <script>
   function openModal(id) {
     document.getElementById(id).classList.remove('hidden');
   }
-
   function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
   }
-
   function showTab(tab) {
-    const tabs = ['artikel', 'kisah', 'refleksi'];
+    const tabs = ['artikel','kisah','refleksi'];
     tabs.forEach(t => {
       document.getElementById('tab-' + t).classList.add('hidden');
-      document.getElementById('btn-' + t).classList.remove('bg-[var(--gold)]', 'text-black');
-      document.getElementById('btn-' + t).classList.add('bg-zinc-800', 'text-[var(--gold)]');
+      document.getElementById('btn-' + t).classList.remove('bg-[var(--gold)]','text-black');
+      document.getElementById('btn-' + t).classList.add('bg-zinc-800','text-[var(--gold)]');
     });
     document.getElementById('tab-' + tab).classList.remove('hidden');
-    document.getElementById('btn-' + tab).classList.add('bg-[var(--gold)]', 'text-black');
-    document.getElementById('btn-' + tab).classList.remove('bg-zinc-800', 'text-[var(--gold)]');
+    document.getElementById('btn-' + tab).classList.add('bg-[var(--gold)]','text-black');
+    document.getElementById('btn-' + tab).classList.remove('bg-zinc-800','text-[var(--gold)]');
   }
 </script>
 
