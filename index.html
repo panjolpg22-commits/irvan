@@ -122,7 +122,6 @@
   <div class="max-w-5xl mx-auto px-5">
     <h2 class="text-3xl font-bold text-center mb-10">⚔️ Projek</h2>
 
-<!-- PROJECT SECTION SEMUA -->
 <section id="projek" class="bg-[#0b0b0e] py-24">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--gold)] text-center mb-12">⚔️ Projek Panglima Islam</h2>
@@ -146,7 +145,7 @@
       <div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
         <h3 class="text-xl font-semibold text-[var(--gold)]">✍️ Karya Santri</h3>
         <p class="mt-2 text-sm text-zinc-300">Puisi, tulisan, dan karya kreatif santri:</p>
-        <blockquote class="mt-4 text-zinc-100 italic">
+        <blockquote class="mt-4 text-zinc-100 italic max-h-60 overflow-y-auto">
           "Menuntut ilmu sepanjang hayat, di pondok hati ditempa kuat, sabar jadi cahaya penuntun, santri berjuang demi ridha Tuhan."
         </blockquote>
       </div>
@@ -165,14 +164,7 @@
   </div>
 </section>
 
-<!-- E-Book SKI Project Card -->
-<div class="bg-[#1a1a1a] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all">
-  <h3 class="text-xl font-semibold text-[var(--gold)]">📖 E-Book SKI</h3>
-  <p class="mt-2 text-sm text-zinc-300">Kumpulan artikel, kisah, dan refleksi tentang sejarah Islam.</p>
-  <button onclick="openModal('modal-ebook')" class="mt-4 w-full bg-[var(--gold)] text-black py-2 rounded-lg">Lihat Isi</button>
-</div>
-
-<!-- Modal E-Book -->
+<!-- MODAL E-BOOK SKI -->
 <div id="modal-ebook" class="fixed inset-0 bg-black/80 backdrop-blur flex justify-center items-start pt-24 hidden z-50">
   <div class="bg-[#1a1a1a] rounded-2xl max-w-3xl w-full p-6 relative">
     <button onclick="closeModal('modal-ebook')" class="absolute top-4 right-4 text-[var(--gold)] text-2xl font-bold">&times;</button>
@@ -198,7 +190,7 @@
   </div>
 </div>
 
-<!-- Script -->
+<!-- SCRIPT -->
 <script>
   function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
   function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
